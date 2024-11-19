@@ -37,11 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-]
-EXTERNAL_APPS = [
     "student",
+    'rest_framework',
 ]
-INSTALLED_APPS+=EXTERNAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -51,6 +49,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "student.middleware.student_middleware.Restrictip",
+    
+
 ]
 
 ROOT_URLCONF = "project.urls"
