@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Student
+from ..models import Student
 from django.utils import timezone
 
 
@@ -17,7 +17,7 @@ class StudentSerializer(serializers.Serializer):
     section = serializers.CharField(max_length = 1,required=True)
     class Meta:
         model = Student
-        fields = ['name','registration_no','email','room_no','section','updated_at'] # or '__all__
+        fields = ['name','registration_no','email','room_no','section','updated_at'] # or '__all__'
         read_only_fields = ['created_at']
     
     def validate_name(self, value):
