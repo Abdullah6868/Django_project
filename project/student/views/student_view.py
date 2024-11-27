@@ -1,8 +1,7 @@
 # student/views/student_view.py
 from django.http import JsonResponse
 from student.models import Student
-from  ..Serializer.student_serializer import StudentSerializer  # Ensure correct import
-from django.views.decorators.csrf import csrf_exempt
+from  ..Serializer.student_serializer import StudentSerializer 
 from rest_framework import status
 from rest_framework.views import APIView
 import json
