@@ -38,9 +38,7 @@ class EductionHistoryView(APIView):
             except EducationHistory.DoesNotExist:
                 return JsonResponse({"error": "Education history not found!"}, status = status.HTTP_404_NOT_FOUND)
         else:
-            student  = EducationHistory.objects.all()
-            serializer = EducationHistorySerializer(student , many=True)
-            return JsonResponse(serializer.data , safe= False , status = status.HTTP_200_OK)
+           return JsonResponse({"errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
     def put(self , request , s_id , e_id):
         try: 

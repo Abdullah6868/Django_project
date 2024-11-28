@@ -12,11 +12,11 @@ urlpatterns = [
     path('student/', StudentView.as_view(), name='student_all'),
     path('student/<int:s_id>/', StudentView.as_view(), name= 'student_detail'),
 
-    path('student/education_history/', EductionHistoryView.as_view(), name= 'all_student_eductaion_detail'),
+    # path('student/education_history/', EductionHistoryView.as_view(), name= 'all_student_eductaion_detail'),
     path('student/education_history/<int:s_id>', EductionHistoryView.as_view(), name= 'student_eductaion_detail'),
     path('student/<int:s_id>/education_history/<int:e_id>', EductionHistoryView.as_view(), name= 'student_eductaion_detail'),
    
-    path('student/certificate/', CertificateView.as_view(), name= 'all_student_eductaion_detail'),
+    # path('student/certificate/', CertificateView.as_view(), name= 'all_student_eductaion_detail'),
     path('student/certificate/<int:s_id>', CertificateView.as_view(), name= 'student_certificate_detail'),
     path('student/<int:s_id>/certificate/<int:c_id>', CertificateView.as_view(), name= 'student_certificate_detail'),
 

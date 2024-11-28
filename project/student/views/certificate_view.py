@@ -20,7 +20,6 @@ class CertificateView(APIView):
         if uploaded_file:
             data['certificate_file'] = uploaded_file
 
-
         data['student'] = student.id
 
         # Prepare serializer
